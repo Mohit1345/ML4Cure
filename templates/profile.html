@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 class="head">User Profile</h1>
+    </div>
+    <form action="">
+        <div class="content1">
+            <!-- For text inputs -->
+            <div class="box">Name:{{user.username}} </div>
+            <div class="box">Email:{{user.email}} </div>
+            {% comment %} <div class="box">City:{{forms.city}} </div>
+            <div class="box">Contact:{{user.contact}} </div>
+            <div class="box">DOB:{{user.dob}} </div> {% endcomment %}
+            <h3>History: </h3>
+            <ul>
+                <li>HEART DISEASE</li>
+            {% for i in heart %}
+            <tr>
+            <td1>{{i.username}}<td1>
+                <td2>{{i.pred}}</td2>
+                <td2>{{i.city}}</td2><br> 
+                {% comment %} <td2>{{i.date}}</td2><br>  {% endcomment %}
+                </tr>
+            {% endfor %} 
+                <li>LIVER DISEASE</li>
+            {% for i in liver %}
+            <tr>
+            <td1>{{i.username}}<td1>
+                <td2>{{i.pred}}</td2><br> 
+                {% comment %} <td2>{{i.city}}</td2><br>  {% endcomment %}
+                </tr>
+            {% endfor %}     
+                 <li>CHRONIC DISEASE</li>
+            {% for i in chronic %}
+            <tr>
+            <td1>{{i.username}}<td1>
+                <td2>{{i.pred}}</td2>
+                <td2>{{i.city}}</td2><br> 
+                </tr>
+            {% endfor %}
+            </ul>
+            <br><br><br>
+            <details>
+                <summary>History Format</summary>
+                <p>
+                    first_parameter = Username<br>
+                    Second_parameter = occurence of disease (1=YES ,0=NO)<br>
+                    Third_parameter = city
+                </p>
+            </details>  
+        </div> 
+    </form>
+
+      
+</body>
+</html>

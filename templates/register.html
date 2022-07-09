@@ -1,0 +1,30 @@
+<style>
+h3{
+    color:red;
+}
+</style>
+<body bgcolor=#76b852>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+<form method="POST" action="register"/>
+{% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username"/>
+    <p>Email</p>
+    <input type="email" name="email"/>
+    <p>city:</p>
+    <input type="text" name="city"/>
+    <p>Password</p>
+    <input type="password" name="password"/>
+    <p>Confirm Password:</p>
+    <input type="password" name="password2"/><br>
+    {% comment %} <p>Contact:</p>
+    <input type="text" name="contact"/>
+    {% endcomment %}
+    {% comment %} <p>Date of Birth:</p>
+    <input type="date" name="dob"/>     {% endcomment %}
+    <br>
+    <input type="submit"/>
+</form>
+</body>

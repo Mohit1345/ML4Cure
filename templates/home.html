@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}" >
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{% static 'images\logo_new.png' %}" alt="" height="100px" width="100px">
+        <nav class="navbar">
+            {% comment %} <ul class="nav"> {% endcomment %}
+                <a href="" class="">Home</a>
+                <a href="/services" class="">Services</a>
+                {% if user.is_authenticated %}
+                <a href="/choose" class="">Get Started</a>
+                <a class="" href="logout">Logout</a>
+                <a href="profile">Profile</a>
+                {% else %}
+                <a class="" href="login">Login/Signup</a>
+                {% endif %}
+            {% comment %} </ul> {% endcomment %}
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <div class="home">
+        <div class="main-home">
+            
+            <div class="main-content">
+                <h1 class="heading">ML4Cure</h1><br><br>
+                <h1>Machine Learning in Healthcare</h1><br><br>
+                <p>Using Machine Learning for predicting the occurance of disease</p>
+            </div>
+
+            <div class="main-content">
+
+                <div class="main-image">
+                    <img src="{% static 'images\1st_home.jpg' %}" alt="">
+                </div>
+
+            </div>
+        </div>   
+    </div>
+
+    <div class="home">
+        <div class="main-home">
+            
+            <div class="main-content">
+
+                <div class="main-image">
+                    <img src="{% static 'images\2nd_home.jpg' %}" alt="">
+                </div>
+
+            </div>
+
+            <div class="main-content">
+                <h1 class="heading">ML4Cure</h1><br><br>
+                <h1>Machine Learning in Healthcare</h1><br><br>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GETTING STARTED SECTION -->
+
+    <section class="get-started">
+        <div class="gS">
+            <div class="inner-gS">
+                <h1>Click Here to know more</h1>
+                <a href="/login" class="button-73">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CARDS FOR SERVICES SECTION -->
+    <div class="main-services">
+        <div class="inner-services">
+            <img src="{% static 'images\3rd_home.jpg' %}" alt="">
+            <div class="content-services">
+                <h1>HEART</h1>
+            </div>
+        </div>
+
+        <div class="inner-services">
+            <img src="{% static 'images\3rd_home.jpg' %}" alt="">
+            <div class="content-services">
+                <h1>LIVER</h1>
+            </div>
+        </div>
+
+        <div class="inner-services">
+            <img src="{% static 'images\3rd_home.jpg' %}" alt="">
+            <div class="content-services">
+                <h1>Parkinson</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

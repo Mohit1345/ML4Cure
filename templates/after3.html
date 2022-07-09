@@ -1,0 +1,92 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'main.css' %}" >
+        <link rel="stylesheet" href="{% static 'choose.css' %}" >
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    </head>
+
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1>  PREDICTION :  </h1>
+    
+    {%if data == 0%}
+    <h1>NO, The probability of the disease is low. But still if you want to meet doctor, Here are some Heart disease specialists </h1><b></b> 
+    <section class="decompCards">
+    <div class="card">
+        <div class="card-image dec1"></div>
+        <h2>Poona Preventive Cardiology Center
+        </h2>
+        <p class="cardPara"><b>Address:</b> 14, Aranyeshwar Rd, Ruturang Society Phase II, Sant Nagar, Parvati Paytha, Pune, Maharashtra 411009<br><b>Areas served:</b> Swargate<br><b>Hours:</b> Closes 5PM<br><b>Phone:</b> 089293 38631</p>
+        
+    </div>
+
+    <div class="card">
+        <div class="card-image dec1"></div>
+        <h2>Dr. Gaurav Ganeshwala
+        </h2>
+        <p class="cardPara"><b>Address:</b> Cardiology OPD, Ground Floor Ruby Hall Clinic, Sasoon Rd, Pune, Maharashtra 411001<br><b>Areas served:</b> Pune<br><b>Hours:</b> Opens 12PM<br><b>Phone:</b> 086057 12240</p>
+        
+        
+    </div>
+
+    <div class="card">
+        <div class="card-image dec1"></div>
+        <h2>Dr. Rahul Patil
+        </h2>
+        <p class="cardPara"><b>Address:</b> 301, Choice A Apartment, Dhole Patil Rd, opposite Ruby Hall, Pune, Maharashtra 411001<br><b>Areas served:</b> Pune<br><b>Hours:</b> CLoses 6PM<br><b>Phone:</b> 020 2616 1553</p>
+    </div>
+
+    
+</section>
+
+
+    {%else%}
+    <h1>YES, The probability of the disease is high. You should go meet a doctor, Here are some Heart disease specialists</h1>
+
+    <section class="decompCards">
+        <div class="card">
+            <div class="card-image dec1"></div>
+            <h2>Poona Preventive Cardiology Center
+            </h2>
+            <p class="cardPara"><b>Address:</b> 14, Aranyeshwar Rd, Ruturang Society Phase II, Sant Nagar, Parvati Paytha, Pune, Maharashtra 411009<br><b>Areas served:</b> Swargate<br><b>Hours:</b> Closes 5PM<br><b>Phone:</b> 089293 38631</p>
+            
+        </div>
+    
+        <div class="card">
+            <div class="card-image dec1"></div>
+            <h2>Dr. Gaurav Ganeshwala
+            </h2>
+            <p class="cardPara"><b>Address:</b> Cardiology OPD, Ground Floor Ruby Hall Clinic, Sasoon Rd, Pune, Maharashtra 411001<br><b>Areas served:</b> Pune<br><b>Hours:</b> Opens 12PM<br><b>Phone:</b> 086057 12240</p>
+            
+            
+        </div>
+    
+        <div class="card">
+            <div class="card-image dec1"></div>
+            <h2>Dr. Rahul Patil
+            </h2>
+            <p class="cardPara"><b>Address:</b> 301, Choice A Apartment, Dhole Patil Rd, opposite Ruby Hall, Pune, Maharashtra 411001<br><b>Areas served:</b> Pune<br><b>Hours:</b> CLoses 6PM<br><b>Phone:</b> 020 2616 1553</p>
+        </div>
+    
+        
+    </section>
+
+    
+    {%endif%}
+        <br><br>
+    <a href='/'>go back to home page</a>
+
+    </center>
+
+</body>
+
+</html>
+
+
+

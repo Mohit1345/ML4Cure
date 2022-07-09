@@ -1,0 +1,30 @@
+<html>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> Liver disease survey form </h1><br>
+        
+        <form method="POST", action="{% url 'after2' %}"
+           <b> 
+            {% csrf_token %}
+            Enter age :  <input type="text", name='a', placeholder="Enter age"> <br><br>
+            Enter Gender :  <input type="text", name='b', placeholder="Enter 1 for Male"> <br><br>
+            Total bilirubin :  <input type="text", name='c', placeholder=""> <br><br>
+            Direct bilirubin : <input type="text", name='d', placeholder=""> <br><br>
+            Alkaline Phosphate : <input type="text", name='e', placeholder=""> <br><br>
+            Alamine Aminotransferese : <input type="text", name='f', placeholder=""> <br><br>
+            Aspartate Aminotransferese : <input type="text", name='g', placeholder=""> <br><br>
+            Total Protiens : <input type="text", name='h', placeholder=""> <br><br>
+            Albumin : <input type="text", name='i', placeholder=""> <br><br>
+            Albumin and Globulin ratio : <input type="text", name='j', placeholder=""> <br><br>
+            Username: <input type="text", name='username', placeholder=""> <br><br>
+            city:  <input type="text", name='city', placeholder=""> <br><br>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        
+    </center>
+
+    </body>
+</html>

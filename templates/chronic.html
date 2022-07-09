@@ -1,0 +1,37 @@
+
+<html>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> Chronic disease survey form </h1><br>
+        
+        <form method="POST", action="{% url 'after3' %}">
+           <b> {% csrf_token %}
+            Enter age :  <input type="text", name='a', placeholder="Enter age"> <br><br>
+            Enter BP :  <input type="text", name='b', placeholder=""> <br><br>
+            How many cigerettes do you smoke daily? : <input type="text", name='c', placeholder=""> <br><br>
+            Do you take BP medicines? : <input type="text", name='d', placeholder="Enter 1 for YES"> <br><br>
+            Do you have prevalent stroke history? : <input type="text", name='e', placeholder="Enter 1 for YES"> <br><br>
+            Do you have prevalent hypertension history? : <input type="text", name='f', placeholder="Enter 1 for YES"> <br><br>
+            Do you have diabetes? : <input type="text", name='g', placeholder="Enter 1 for YES"> <br><br>
+            Enter cholesterol value : <input type="text", name='h', placeholder=""> <br><br>
+            Enter systolic BP : <input type="text", name='i', placeholder=""> <br><br>
+            Enter diastolic BP : <input type="text", name='j', placeholder=""> <br><br>
+            Enter your BMI : <input type="text", name='k', placeholder=""> <br><br>
+            Enter HeartRate : <input type="text", name='l', placeholder=""> <br><br>
+            Enter Glucose value : <input type="text", name='m', placeholder=""> <br><br>
+            Enter diastolic BP : <input type="text", name='n', placeholder=""> <br><br>
+            Enter your BMI : <input type="text", name='o', placeholder=""> <br><br>
+            Enter HeartRate : <input type="text", name='p', placeholder=""> <br><br>
+            Enter Glucose value : <input type="text", name='q', placeholder=""> <br><br>
+            Username: <input type="text", name='username', placeholder=""> <br><br>
+            city:  <input type="text", name='city', placeholder=""> <br><br>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        
+    </center>
+
+    </body>
+</html>
